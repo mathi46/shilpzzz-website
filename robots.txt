@@ -1,0 +1,34 @@
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://www.shilpzzztech.in/sitemap.xml
+
+# Crawl-delay for politeness
+Crawl-delay: 1
+
+# Allow all common search engines
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Slurp
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+# Block access to sensitive files and directories
+Disallow: /admin/
+Disallow: /private/
+Disallow: /.git/
+Disallow: /node_modules/
+Disallow: *.log
+Disallow: *.tmp
+
+# Allow CSS and JS files for better rendering
+Allow: /styles.css
+Allow: /*.js
+Allow: /*.css 
