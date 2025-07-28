@@ -3,76 +3,397 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Shilpzzz Technologies</title>
+  <title>ShilpzzZ Technologies - AI Empowered Software Solutions</title>
   <link rel="stylesheet" href="styles.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-  <header>
-    <h1>Shilpzzz Technologies</h1>
-    <nav>
-      <ul>
-        <li><a href="#about">About</a></li>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#technologies">Technologies</a></li>
-        <li><a href="#industries">Industries</a></li>
-        <li><a href="#contact">Contact</a></li>
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="nav-logo">
+        <i class="fas fa-code"></i>
+        <span>Shilpzzz Technologies</span>
+      </div>
+      <ul class="nav-menu">
+        <li><a href="#home" class="nav-link">Home</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#services" class="nav-link">Services</a></li>
+        <li><a href="#technologies" class="nav-link">Technologies</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+        <li><a href="#contact" class="nav-link cta-button">Get Started</a></li>
       </ul>
-    </nav>
-  </header>
+      <div class="hamburger">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+    </div>
+  </nav>
 
-  <section id="hero">
-    <h2>Empowering Digital Solutions</h2>
-    <p>Custom Software Development • Cloud • Web • Mobile</p>
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <div class="hero-container">
+      <div class="hero-content">
+        <h1 class="hero-title">
+          Transforming Ideas Into
+          <span class="gradient-text">Digital Reality</span>
+        </h1>
+        <p class="hero-description">
+          We build AI powered cutting-edge software solutions that drive innovation and accelerate business growth. From web applications to cloud infrastructure, we deliver excellence at every level.
+        </p>
+        <div class="hero-buttons">
+          <a href="#services" class="btn btn-primary">
+            <i class="fas fa-rocket"></i>
+            Explore Services
+          </a>
+          <a href="#contact" class="btn btn-secondary">
+            <i class="fas fa-comments"></i>
+            Get In Touch
+          </a>
+        </div>
+      </div>
+      <div class="hero-stats">
+        <div class="stat-item">
+          <h3>100+</h3>
+          <p>Projects Delivered</p>
+        </div>
+        <div class="stat-item">
+          <h3>50+</h3>
+          <p>Happy Clients</p>
+        </div>
+        <div class="stat-item">
+          <h3>24/7</h3>
+          <p>Support</p>
+        </div>
+      </div>
+    </div>
   </section>
 
-  <section id="about">
-    <h2>About Us</h2>
-    <p>Shilpzzz Technologies is a forward-thinking software development company delivering secure, scalable, and smart solutions to clients globally.</p>
+  <!-- About Section -->
+  <section id="about" class="about">
+    <div class="container">
+      <div class="section-header">
+        <h2>About ShilpzzZ Technologies</h2>
+        <p>Your trusted partner in digital transformation</p>
+      </div>
+      <div class="about-content">
+        <div class="about-text">
+          <h3>Innovation Meets Excellence</h3>
+          <p>
+            ShilpzzZ Technologies is a premier software development company committed to delivering 
+            innovative, scalable, and secure digital solutions. With years of expertise in modern 
+            technologies, we help businesses transform their ideas into powerful software applications.
+          </p>
+          <p>
+            Our team of skilled developers, designers, and architects work collaboratively to create 
+            solutions that not only meet your current needs but also scale with your future growth.
+          </p>
+          <div class="about-features">
+            <div class="feature-item">
+              <i class="fas fa-shield-alt"></i>
+              <span>Secure & Reliable</span>
+            </div>
+            <div class="feature-item">
+              <i class="fas fa-expand-arrows-alt"></i>
+              <span>Scalable Solutions</span>
+            </div>
+            <div class="feature-item">
+              <i class="fas fa-clock"></i>
+              <span>On-Time Delivery</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </section>
 
-  <section id="services">
-    <h2>Our Services</h2>
-    <ul>
-      <li>Custom Software Development</li>
-      <li>Web Application Development</li>
-      <li>Mobile App Development</li>
-      <li>Cloud Integration (AWS, Azure)</li>
-      <li>DevOps & Automation</li>
-    </ul>
+  <!-- Services Section -->
+  <section id="services" class="services">
+    <div class="container">
+      <div class="section-header">
+        <h2>Our Services</h2>
+        <p>Comprehensive technology solutions for your business</p>
+      </div>
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-icon">
+            <i class="fas fa-code"></i>
+          </div>
+          <h3>AI Powered Custom Software Development</h3>
+          <p>Tailored software solutions built to meet your specific business requirements with modern frameworks and best practices.</p>
+          <ul>
+            <li>Enterprise Applications</li>
+            <li>API Development</li>
+            <li>System Integration</li>
+          </ul>
+        </div>
+        
+        <div class="service-card">
+          <div class="service-icon">
+            <i class="fas fa-globe"></i>
+          </div>
+          <h3>Web Development</h3>
+          <p>Responsive, fast, and SEO-optimized web applications that deliver exceptional user experiences across all devices.</p>
+          <ul>
+            <li>React & Angular Apps</li>
+            <li>E-commerce Platforms</li>
+            <li>Progressive Web Apps</li>
+          </ul>
+        </div>
+        
+        <div class="service-card">
+          <div class="service-icon">
+            <i class="fas fa-mobile-alt"></i>
+          </div>
+          <h3>Mobile App Development</h3>
+          <p>Native and cross-platform mobile applications that engage users and drive business growth.</p>
+          <ul>
+            <li>iOS & Android Apps</li>
+            <li>React Native</li>
+            <li>Flutter Development</li>
+          </ul>
+        </div>
+        
+        <div class="service-card">
+          <div class="service-icon">
+            <i class="fas fa-cloud"></i>
+          </div>
+          <h3>Cloud Solutions</h3>
+          <p>Migrate, deploy, and manage your applications on leading cloud platforms with optimized performance.</p>
+          <ul>
+            <li>AWS & Azure Migration</li>
+            <li>Cloud Architecture</li>
+            <li>DevOps & CI/CD</li>
+          </ul>
+        </div>
+      </div>
+    </div>
   </section>
 
-  <section id="technologies">
-    <h2>Technologies</h2>
-    <p>We specialize in:</p>
-    <ul>
-      <li>.NET Core, C#, ASP.NET</li>
-      <li>React, Angular, Vue</li>
-      <li>Node.js, Python, Java</li>
-      <li>SQL Server, PostgreSQL, MongoDB</li>
-    </ul>
+  <!-- Technologies Section -->
+  <section id="technologies" class="technologies">
+    <div class="container">
+      <div class="section-header">
+        <h2>Technologies We Master</h2>
+        <p>Cutting-edge tools and frameworks for modern solutions</p>
+      </div>
+      <div class="tech-categories">
+        <div class="tech-category">
+          <h3><i class="fas fa-laptop-code"></i> Frontend</h3>
+          <div class="tech-tags">
+            <span class="tech-tag">React</span>
+            <span class="tech-tag">Angular</span>
+            <span class="tech-tag">Vue.js</span>
+            <span class="tech-tag">TypeScript</span>
+            <span class="tech-tag">Next.js</span>
+          </div>
+        </div>
+        
+        <div class="tech-category">
+          <h3><i class="fas fa-server"></i> Backend</h3>
+          <div class="tech-tags">
+            <span class="tech-tag">.NET Core</span>
+            <span class="tech-tag">Node.js</span>
+            <span class="tech-tag">Python</span>
+            <span class="tech-tag">C#</span>
+          </div>
+        </div>
+        
+        <div class="tech-category">
+          <h3><i class="fas fa-database"></i> Database</h3>
+          <div class="tech-tags">
+            <span class="tech-tag">SQL Server</span>
+            <span class="tech-tag">PostgreSQL</span>
+            <span class="tech-tag">MongoDB</span>
+            <span class="tech-tag">Redis</span>
+            <span class="tech-tag">MySQL</span>
+          </div>
+        </div>
+        
+        <div class="tech-category">
+          <h3><i class="fas fa-cloud"></i> Cloud & DevOps</h3>
+          <div class="tech-tags">
+            <span class="tech-tag">AWS</span>
+            <span class="tech-tag">Azure</span>
+            <span class="tech-tag">Docker</span>
+            <span class="tech-tag">Kubernetes</span>
+            <span class="tech-tag">Jenkins</span>
+          </div>
+        </div>
+      </div>
+    </div>
   </section>
 
-  <section id="industries">
-    <h2>Industries We Serve</h2>
-    <ul>
-      <li>LegalTech</li>
-      <li>Healthcare</li>
-      <li>FinTech</li>
-      <li>Retail</li>
-      <li>EdTech</li>
-    </ul>
+  <!-- Industries Section -->
+  <section class="industries">
+    <div class="container">
+      <div class="section-header">
+        <h2>Industries We Serve</h2>
+        <p>Delivering specialized solutions across diverse sectors</p>
+      </div>
+      <div class="industries-grid">
+        <div class="industry-card">
+          <i class="fas fa-gavel"></i>
+          <h3>LegalTech</h3>
+          <p>Digital transformation for law firms, Settlement Administators  and legal departments</p>
+        </div>
+        <div class="industry-card">
+          <i class="fas fa-heartbeat"></i>
+          <h3>Healthcare</h3>
+          <p>HIPAA-compliant solutions for medical institutions</p>
+        </div>
+        <div class="industry-card">
+          <i class="fas fa-chart-line"></i>
+          <h3>FinTech</h3>
+          <p>Secure financial technology and payment solutions</p>
+        </div>
+        <div class="industry-card">
+          <i class="fas fa-shopping-cart"></i>
+          <h3>E-commerce</h3>
+          <p>Scalable retail and marketplace platforms</p>
+        </div>
+        <div class="industry-card">
+          <i class="fas fa-graduation-cap"></i>
+          <h3>EdTech</h3>
+          <p>Interactive learning management systems</p>
+        </div>
+        <div class="industry-card">
+          <i class="fas fa-industry"></i>
+          <h3>Manufacturing</h3>
+          <p>IoT and automation solutions for industry 4.0</p>
+        </div>
+      </div>
+    </div>
   </section>
 
-  <section id="contact">
-    <h2>Contact Us</h2>
-    <p>Email: <a href="mailto:contact@shilpzzztech.in">support@shilpzzztech.in</a></p>
-    <p>Phone: +91-XXXXXXXXXX</p>
+  <!-- Contact Section -->
+  <section id="contact" class="contact">
+    <div class="container">
+      <div class="section-header">
+        <h2>Ready to Start Your Project?</h2>
+        <p>Let's discuss how we can bring your vision to life</p>
+      </div>
+      <div class="contact-content">
+        <div class="contact-info">
+          <div class="contact-item">
+            <i class="fas fa-envelope"></i>
+            <div>
+              <h3>Email Us</h3>
+              <p><a href="mailto:support@shilpzzztech.in">support@shilpzzztech.in</a></p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <i class="fas fa-clock"></i>
+            <div>
+              <h3>Business Hours</h3>
+              <p>Mon - Fri: 9:00 AM - 6:00 PM IST</p>
+            </div>
+          </div>
+        </div>
+        <div class="contact-form">
+          <form>
+            <div class="form-group">
+              <input type="text" placeholder="Your Name" required>
+              <input type="email" placeholder="Your Email" required>
+            </div>
+            <div class="form-group">
+              <input type="text" placeholder="Subject" required>
+            </div>
+            <div class="form-group">
+              <textarea placeholder="Your Message" rows="5" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">
+              <i class="fas fa-paper-plane"></i>
+              Send Message
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
   </section>
 
-  <footer>
-    <p>&copy; 2025 Shilpzzz Technologies. All rights reserved.</p>
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <div class="footer-logo">
+            <i class="fas fa-code"></i>
+            <span>Shilpzzz Technologies</span>
+          </div>
+          <p>Transforming ideas into digital reality with innovative software solutions.</p>
+        </div>
+        <div class="footer-section">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#technologies">Technologies</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Services</h3>
+          <ul>
+            <li><a href="#services">Web Development</a></li>
+            <li><a href="#services">Mobile Apps</a></li>
+            <li><a href="#services">Cloud Solutions</a></li>
+            <li><a href="#services">Custom Software</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Follow Us</h3>
+          <div class="social-links">
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-github"></i></a>
+            <a href="#"><i class="fab fa-facebook"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Shilpzzz Technologies. All rights reserved.</p>
+      </div>
+    </div>
   </footer>
+
+  <script>
+    // Mobile menu toggle
+    const hamburger = document.querySelector('.hamburger');
+    const navMenu = document.querySelector('.nav-menu');
+
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('active');
+      navMenu.classList.toggle('active');
+    });
+
+    // Smooth scrolling for navigation links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
+      });
+    });
+
+    // Navbar background on scroll
+    window.addEventListener('scroll', () => {
+      const navbar = document.querySelector('.navbar');
+      if (window.scrollY > 50) {
+        navbar.classList.add('scrolled');
+      } else {
+        navbar.classList.remove('scrolled');
+      }
+    });
+  </script>
 
 </body>
 </html>
