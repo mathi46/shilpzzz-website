@@ -27,11 +27,11 @@
   --card-shadow: rgba(0, 0, 0, 0.1);
   --hero-overlay: rgba(255, 255, 255, 0.1);
   
-  /* Brand colors remain constant */
-  --brand-primary: #6366f1;
-  --brand-secondary: #8b5cf6;
-  --brand-accent: #fbbf24;
-  --brand-accent-dark: #f59e0b;
+  /* Brand colors updated to dark red theme */
+  --brand-primary: #8B0000;
+  --brand-secondary: #A0001B;
+  --brand-accent: #DC143C;
+  --brand-accent-dark: #B22222;
   --success-color: #10b981;
 }
 
@@ -48,9 +48,9 @@
   --card-bg: #1e293b;
   --nav-bg: rgba(15, 23, 42, 0.95);
   --nav-shadow: rgba(0, 0, 0, 0.3);
-  --footer-bg: #020617;
-  --footer-text: #64748b;
-  --footer-border: #1e293b;
+  --footer-bg: #2D0A0A;
+  --footer-text: #cbd5e1;
+  --footer-border: #3f1f1f;
   --contact-item-bg: #1e293b;
   --service-border: #334155;
   --feature-shadow: rgba(0, 0, 0, 0.2);
@@ -163,7 +163,7 @@ body {
 
 .cta-button:hover {
   transform: translateY(-2px);
-  box-shadow: 0 10px 25px rgba(99, 102, 241, 0.3);
+  box-shadow: 0 10px 25px rgba(139, 0, 0, 0.3);
 }
 
 .cta-button::after {
@@ -218,7 +218,7 @@ body {
 
 /* Hero Section */
 .hero {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #8B0000 0%, #DC143C 100%);
   color: white;
   padding: 120px 0 80px;
   min-height: 100vh;
@@ -262,10 +262,12 @@ body {
 }
 
 .gradient-text {
-  background: linear-gradient(135deg, #fbbf24, #f59e0b);
+  background: linear-gradient(135deg, #ffffff, #FFB6C1);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  font-weight: 800;
 }
 
 .hero-description {
@@ -300,13 +302,13 @@ body {
 }
 
 .btn-primary {
-  background: linear-gradient(135deg, #fbbf24, #f59e0b);
-  color: #1a1a1a;
+  background: linear-gradient(135deg, #DC143C, #B22222);
+  color: white;
 }
 
 .btn-primary:hover {
   transform: translateY(-3px);
-  box-shadow: 0 15px 35px rgba(251, 191, 36, 0.4);
+  box-shadow: 0 15px 35px rgba(220, 20, 60, 0.4);
 }
 
 .btn-secondary {
@@ -341,7 +343,8 @@ body {
   font-size: 2.5rem;
   font-weight: 700;
   margin-bottom: 5px;
-  color: #fbbf24;
+  color: #ffffff;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 .stat-item p {
@@ -546,8 +549,8 @@ body {
 }
 
 .tech-tag {
-  background: linear-gradient(135deg, #e0e7ff, #c7d2fe);
-  color: #4338ca;
+  background: linear-gradient(135deg, #FFE4E1, #FFC0C0);
+  color: #8B0000;
   padding: 8px 16px;
   border-radius: 25px;
   font-size: 0.9rem;
@@ -586,7 +589,7 @@ body {
   background: var(--card-bg);
   border-color: var(--brand-primary);
   transform: translateY(-5px);
-  box-shadow: 0 15px 40px rgba(99, 102, 241, 0.1);
+  box-shadow: 0 15px 40px rgba(139, 0, 0, 0.1);
 }
 
 .industry-card i {
@@ -891,7 +894,8 @@ body {
 
 .logo-highlight {
   fill: var(--brand-primary);
-  transition: fill 0.3s ease;
+  filter: drop-shadow(0 1px 2px rgba(139, 0, 0, 0.2));
+  transition: fill 0.3s ease, filter 0.3s ease;
 }
 
 .logo-tagline {
