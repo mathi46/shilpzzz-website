@@ -662,12 +662,14 @@ body {
   text-decoration: none;
 }
 
+
 .email-link {
   color: var(--brand-primary) !important;
   font-weight: 600;
   text-decoration: underline;
   transition: all 0.3s ease;
 }
+
 
 .email-link:hover {
   color: var(--brand-accent) !important;
