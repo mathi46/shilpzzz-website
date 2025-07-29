@@ -518,7 +518,7 @@
             <i class="fas fa-envelope" aria-label="Email icon"></i>
             <div>
               <h3>Email Us</h3>
-              <p><a href="mailto:support@shilpzzztech.in">support@shilpzzztech.in</a></p>
+              <p><a href="mailto:support@shilpzzztech.in" class="email-link">support@shilpzzztech.in</a></p>
             </div>
           </div>
           <div class="contact-item">
@@ -528,24 +528,6 @@
               <p>Mon - Fri: 9:00 AM - 6:00 PM IST</p>
             </div>
           </div>
-        </div>
-        <div class="contact-form">
-          <form id="contactForm">
-            <div class="form-group">
-              <input type="text" name="name" placeholder="Your Name" required>
-              <input type="email" name="email" placeholder="Your Email" required>
-            </div>
-            <div class="form-group">
-              <input type="text" name="subject" placeholder="Subject" required>
-            </div>
-            <div class="form-group">
-              <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
-            </div>
-            <button type="submit" class="btn btn-primary">
-              <i class="fas fa-paper-plane"></i>
-              Send Message
-            </button>
-          </form>
         </div>
       </div>
     </div>
@@ -681,25 +663,7 @@
       }
     }
 
-    // Track contact form submission
-    document.getElementById('contactForm').addEventListener('submit', function(e) {
-      e.preventDefault();
-      
-      // Track the conversion event
-      trackEvent('form_submit', 'Contact', 'Contact Form Submission', 1);
-      
-      // Track as conversion for GA4
-      if (typeof gtag !== 'undefined') {
-        gtag('event', 'conversion', {
-            'send_to': 'G-YDH85T5W9X/contact_form_submit'
-        });
-      }
-      
-      // Here you would normally send the form data to your server
-      // For demo purposes, we'll show a success message
-      alert('Thank you for your message! We will get back to you soon.');
-      this.reset();
-    });
+
 
     // Track CTA button clicks
     document.querySelectorAll('.btn').forEach(button => {
