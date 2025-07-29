@@ -867,3 +867,64 @@ body {
     text-align: center;
   }
 }
+
+/* Logo Styling for Theme Consistency */
+.nav-logo img {
+  height: 60px;
+  width: 150px;
+  transition: all 0.3s ease;
+  filter: brightness(1) contrast(1);
+}
+
+/* SVG Logo Styling */
+.logo-svg {
+  height: 60px;
+  width: 200px;
+  transition: all 0.3s ease;
+}
+
+/* SVG Logo text styling */
+.logo-company-name {
+  fill: var(--text-primary);
+  transition: fill 0.3s ease;
+}
+
+.logo-highlight {
+  fill: var(--brand-primary);
+  transition: fill 0.3s ease;
+}
+
+.logo-tagline {
+  fill: var(--text-secondary);
+  transition: fill 0.3s ease;
+}
+
+/* Dark theme logo adjustments */
+.dark-theme .nav-logo img {
+  /* Increase brightness and adjust contrast for better visibility in dark mode */
+  filter: brightness(1.2) contrast(0.9);
+  /* Add a subtle white glow effect for better visibility */
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+}
+
+/* Logo hover effects */
+.nav-logo:hover img,
+.nav-logo:hover .logo-svg {
+  transform: scale(1.05);
+}
+
+.dark-theme .nav-logo:hover img {
+  filter: brightness(1.3) contrast(0.95);
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+}
+
+/* SVG specific hover effects */
+.nav-logo:hover .logo-icon {
+  transform: scale(1.1);
+  transform-origin: center;
+  transition: transform 0.3s ease;
+}
+
+.nav-logo:hover .logo-highlight {
+  fill: var(--brand-accent);
+}
