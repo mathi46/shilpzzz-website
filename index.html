@@ -191,6 +191,52 @@
         }
       }
   </script>
+
+  <!-- Team Members Structured Data -->
+  <script type="application/ld+json">
+    [
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Shilpa M R",
+        "jobTitle": "Founder & CEO",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "ShilpzzZ Technologies"
+        },
+        "sameAs": [
+          "https://www.linkedin.com/in/shilpa-mr-25799a9/"
+        ],
+        "knowsAbout": [
+          "Strategic Leadership",
+          "Business Development",
+          "Client Relations",
+          "Innovation Management"
+        ],
+        "description": "Strategic visionary and business leader driving ShilpzzZ Technologies' mission to deliver transformative software solutions. Passionate about empowering businesses through innovative technology and exceptional client experiences."
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Mathivanan M",
+        "jobTitle": "Co-Founder & Lead Developer",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "ShilpzzZ Technologies"
+        },
+        "sameAs": [
+          "https://www.linkedin.com/in/mathiavananm/"
+        ],
+        "knowsAbout": [
+          "Full Stack Development",
+          "AI Integration",
+          "Cloud Solutions",
+          "Technical Leadership"
+        ],
+        "description": "Passionate software engineer with expertise in AI-powered solutions and modern web technologies. Leading ShilpzzZ Technologies with a vision to transform businesses through innovative software development."
+      }
+    ]
+  </script>
 </head>
 <body>
 
@@ -344,6 +390,7 @@
         <li><a href="#about" class="nav-link">About</a></li>
         <li><a href="#services" class="nav-link">Services</a></li>
         <li><a href="#technologies" class="nav-link">Technologies</a></li>
+        <li><a href="#team" class="nav-link">Team</a></li>
         <li><a href="#contact" class="nav-link">Contact</a></li>
         <li><a href="#contact" class="nav-link cta-button">Get Started</a></li>
         <li>
@@ -609,6 +656,74 @@
     </div>
   </section>
 
+  <!-- Team Section -->
+  <section id="team" class="team">
+    <div class="container">
+      <div class="section-header">
+        <h2>Meet Our Team</h2>
+        <p>The talented professionals behind our innovative solutions</p>
+      </div>
+      <div class="team-grid">
+        <div class="team-card">
+          <div class="team-image">
+            <img src="shilpa-mr.jpg" alt="Shilpa M R - Founder & CEO of ShilpzzZ Technologies" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div class="image-fallback" style="display: none; align-items: center; justify-content: center; height: 60%; background: linear-gradient(135deg, #ec4899, #8b5cf6); color: white; font-size: 3rem; font-weight: bold;">
+              S
+            </div>
+            <div class="team-overlay">
+              <div class="team-social">
+                <a href="https://www.linkedin.com/in/shilpa-mr-25799a9/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile">
+                  <i class="fab fa-linkedin"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="team-info">
+            <h3>Shilpa M R</h3>
+            <p class="team-role">Founder & CEO</p>
+            <p class="team-description">
+              Strategic visionary and business leader driving ShilpzzZ Technologies' mission to deliver transformative software solutions. 
+              Passionate about empowering businesses through innovative technology and exceptional client experiences.
+            </p>
+            <div class="team-skills">
+              <span class="skill-tag">Strategic Leadership</span>
+              <span class="skill-tag">Business Development</span>
+              <span class="skill-tag">Client Relations</span>
+              <span class="skill-tag">Innovation Management</span>
+            </div>
+          </div>
+        </div>
+        
+        <div class="team-card">
+          <div class="team-image">
+            <img src="https://via.placeholder.com/300x300/6366f1/ffffff?text=M" alt="Mathivanan M" loading="lazy">
+            <div class="team-overlay">
+              <div class="team-social">
+                <a href="https://www.linkedin.com/in/mathiavananm/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile">
+                  <i class="fab fa-linkedin"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="team-info">
+            <h3>Mathivanan M</h3>
+            <p class="team-role">Co-Founder & Lead Developer</p>
+            <p class="team-description">
+              Passionate software engineer with expertise in AI-powered solutions and modern web technologies. 
+              Leading ShilpzzZ Technologies with a vision to transform businesses through innovative software development.
+            </p>
+            <div class="team-skills">
+              <span class="skill-tag">Full Stack Development</span>
+              <span class="skill-tag">AI Integration</span>
+              <span class="skill-tag">Cloud Solutions</span>
+              <span class="skill-tag">Technical Leadership</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- Contact Section -->
   <section id="contact" class="contact">
     <div class="container">
@@ -789,6 +904,7 @@
             <li><a href="#about">About</a></li>
             <li><a href="#services">Services</a></li>
             <li><a href="#technologies">Technologies</a></li>
+            <li><a href="#team">Team</a></li>
             <li><a href="privacy-policy.html">Privacy Policy</a></li>
           </ul>
         </div>
@@ -924,6 +1040,22 @@
       tag.addEventListener('click', function() {
         const techName = this.textContent;
         trackEvent('technology_interest', 'Technologies', techName, 1);
+      });
+    });
+
+    // Track team member interactions
+    document.querySelectorAll('.team-card').forEach(card => {
+      card.addEventListener('click', function() {
+        const memberName = this.querySelector('h3').textContent;
+        trackEvent('team_member_view', 'Team', memberName, 1);
+      });
+    });
+
+    // Track team member LinkedIn clicks
+    document.querySelectorAll('.team-social a').forEach(link => {
+      link.addEventListener('click', function() {
+        const memberName = this.closest('.team-card').querySelector('h3').textContent;
+        trackEvent('team_linkedin_click', 'Team', memberName, 1);
       });
     });
 
