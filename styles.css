@@ -896,6 +896,72 @@ body {
     grid-template-columns: 1fr;
     text-align: center;
   }
+
+  /* Mobile Logo Optimizations */
+  .logo-svg {
+    height: 50px;
+    width: 200px;
+    animation: mobile-logo-pulse 4s ease-in-out infinite;
+  }
+
+  /* Always animate key elements on mobile for better visibility */
+  .yantra-circle {
+    animation: mobile-yantra-draw 6s ease-in-out infinite;
+  }
+
+  .prosperity-dot {
+    animation: prosperity-pulse 3s ease-in-out infinite;
+  }
+
+  .sacred-center {
+    animation: mobile-logo-pulse 5s ease-in-out infinite;
+  }
+
+  /* Touch-activated animations (when user taps logo area) */
+  .nav-logo:active .lotus-base,
+  .nav-logo:focus .lotus-base {
+    opacity: 0.4;
+    transform: rotate(15deg) scale(1.05);
+    transition: all 0.3s ease;
+  }
+
+  .nav-logo:active .sacred-geometry,
+  .nav-logo:focus .sacred-geometry {
+    transform: scale(1.03);
+    animation: sacred-meditation 1s ease-in-out;
+  }
+
+  .nav-logo:active .yantra-triangle,
+  .nav-logo:focus .yantra-triangle {
+    transform: rotate(90deg);
+    transition: transform 0.5s ease;
+  }
+
+  .nav-logo:active .logo-letter-sacred,
+  .nav-logo:focus .logo-letter-sacred {
+    transform: scale(1.05);
+    filter: drop-shadow(0 0 8px rgba(251, 191, 36, 0.5));
+    transition: all 0.3s ease;
+  }
+
+  .nav-logo:active .vastu-directions circle,
+  .nav-logo:focus .vastu-directions circle {
+    transform: scale(1.2);
+    opacity: 0.9;
+    transition: all 0.3s ease;
+  }
+
+  /* Reduce animation complexity for better mobile performance */
+  .om-symbol {
+    display: none; /* Hide complex element on mobile for performance */
+  }
+
+  /* Optimize footer logo for mobile */
+  .footer-logo .logo-svg {
+    height: 45px;
+    width: 180px;
+    animation: mobile-logo-pulse 5s ease-in-out infinite;
+  }
 }
 
 /* Professional Logo Styling */
@@ -1152,6 +1218,41 @@ body {
   }
 }
 
+/* Missing sacred-meditation animation */
+@keyframes sacred-meditation {
+  0%, 100% { 
+    transform: scale(1.05) rotate(0deg);
+    opacity: 0.8;
+  }
+  33% { 
+    transform: scale(1.08) rotate(2deg);
+    opacity: 0.9;
+  }
+  66% { 
+    transform: scale(1.03) rotate(-1deg);
+    opacity: 0.85;
+  }
+}
+
+/* Gentle logo pulse animation for mobile */
+@keyframes mobile-logo-pulse {
+  0%, 100% { 
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% { 
+    transform: scale(1.02);
+    opacity: 0.95;
+  }
+}
+
+/* Mobile-friendly yantra drawing */
+@keyframes mobile-yantra-draw {
+  0% { stroke-dashoffset: 113; opacity: 0.2; }
+  50% { stroke-dashoffset: 56; opacity: 0.4; }
+  100% { stroke-dashoffset: 0; opacity: 0.3; }
+}
+
 /* Meditation/focus animation on prolonged hover */
 .nav-logo:hover .sacred-geometry {
   animation: sacred-meditation 2s ease-in-out infinite;
@@ -1209,4 +1310,117 @@ body {
 .footer-logo:hover .logo-highlight {
   fill: var(--vastu-golden-light);
   filter: drop-shadow(0 2px 6px rgba(245, 158, 11, 0.4));
+}
+
+/* Mobile Performance Optimizations */
+@media (max-width: 480px) {
+  /* Further optimize for very small screens */
+  .logo-svg {
+    height: 45px;
+    width: 180px;
+  }
+
+  /* Simplify animations for better performance on low-end devices */
+  .yantra-circle {
+    animation: none; /* Disable complex stroke animations on very small screens */
+    opacity: 0.3;
+  }
+
+  .sacred-geometry {
+    animation: mobile-logo-pulse 6s ease-in-out infinite;
+  }
+}
+
+/* Enable hardware acceleration for better mobile performance */
+.logo-svg,
+.sacred-geometry,
+.yantra-circle,
+.prosperity-dot,
+.sacred-center,
+.logo-letter-sacred {
+  will-change: transform, opacity;
+  transform: translateZ(0); /* Force hardware acceleration */
+  backface-visibility: hidden;
+}
+
+/* Reduce motion for users who prefer it */
+@media (prefers-reduced-motion: reduce) {
+  .logo-svg,
+  .yantra-circle,
+  .prosperity-dot,
+  .sacred-center,
+  .sacred-geometry {
+    animation: none !important;
+  }
+  
+  .nav-logo:hover .sacred-geometry,
+  .footer-logo:hover .sacred-geometry {
+    animation: none !important;
+  }
+}
+
+/* Touch and click interaction classes for mobile */
+.logo-touched .sacred-geometry,
+.logo-clicked .sacred-geometry,
+.logo-focused .sacred-geometry {
+  animation: sacred-meditation 1s ease-in-out;
+  transform: scale(1.03);
+}
+
+.logo-touched .yantra-triangle,
+.logo-clicked .yantra-triangle,
+.logo-focused .yantra-triangle {
+  transform: rotate(90deg);
+  transition: transform 0.5s ease;
+}
+
+.logo-touched .logo-letter-sacred,
+.logo-clicked .logo-letter-sacred,
+.logo-focused .logo-letter-sacred {
+  transform: scale(1.05);
+  filter: drop-shadow(0 0 8px rgba(251, 191, 36, 0.5));
+  transition: all 0.3s ease;
+}
+
+.logo-touched .prosperity-dot,
+.logo-clicked .prosperity-dot,
+.logo-focused .prosperity-dot {
+  transform: scale(1.3);
+  animation: prosperity-pulse 1s ease-in-out;
+}
+
+.logo-touched .vastu-directions circle,
+.logo-clicked .vastu-directions circle,
+.logo-focused .vastu-directions circle {
+  transform: scale(1.2);
+  opacity: 0.9;
+  transition: all 0.3s ease;
+}
+
+/* Intro animation for mobile page load */
+.logo-intro-animation .logo-svg {
+  animation: mobile-logo-intro 2s ease-out;
+}
+
+.logo-intro-animation .sacred-geometry {
+  animation: sacred-meditation 2s ease-in-out;
+}
+
+.logo-intro-animation .prosperity-dot {
+  animation: prosperity-pulse 2s ease-in-out;
+}
+
+@keyframes mobile-logo-intro {
+  0% { 
+    opacity: 0.5;
+    transform: scale(0.8);
+  }
+  50% { 
+    opacity: 1;
+    transform: scale(1.05);
+  }
+  100% { 
+    opacity: 1;
+    transform: scale(1);
+  }
 }

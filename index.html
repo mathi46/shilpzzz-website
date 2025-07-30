@@ -947,6 +947,79 @@
       const newTheme = document.body.classList.contains('dark-theme') ? 'Light' : 'Dark';
       trackEvent('theme_change', 'UI', `Switch to ${newTheme}`, 1);
     });
+
+    // Enhanced mobile logo animation support
+    function initMobileLogoAnimations() {
+      const logoElements = document.querySelectorAll('.nav-logo, .footer-logo');
+      
+      logoElements.forEach(logo => {
+        // Add touch support for mobile devices
+        logo.addEventListener('touchstart', function(e) {
+          // Add a temporary class for touch animation
+          this.classList.add('logo-touched');
+          
+          // Track logo interaction
+          trackEvent('logo_interaction', 'UI', 'Logo Touch', 1);
+          
+          // Remove the class after animation
+          setTimeout(() => {
+            this.classList.remove('logo-touched');
+          }, 1000);
+        }, { passive: true });
+
+        // Add click support for better accessibility
+        logo.addEventListener('click', function(e) {
+          // Don't prevent default if it's a navigation link
+          if (!this.getAttribute('href') || this.getAttribute('href') === '#') {
+            e.preventDefault();
+          }
+          
+          // Trigger animation
+          this.classList.add('logo-clicked');
+          setTimeout(() => {
+            this.classList.remove('logo-clicked');
+          }, 800);
+        });
+
+        // Enhanced focus support for keyboard navigation
+        logo.addEventListener('focus', function() {
+          this.classList.add('logo-focused');
+        });
+
+        logo.addEventListener('blur', function() {
+          this.classList.remove('logo-focused');
+        });
+      });
+
+      // Auto-animate logo on page load for mobile visibility
+      if (window.innerWidth <= 768) {
+        setTimeout(() => {
+          const navLogo = document.querySelector('.nav-logo');
+          if (navLogo) {
+            navLogo.classList.add('logo-intro-animation');
+            setTimeout(() => {
+              navLogo.classList.remove('logo-intro-animation');
+            }, 2000);
+          }
+        }, 500);
+      }
+    }
+
+    // Initialize mobile logo animations when DOM is ready
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', initMobileLogoAnimations);
+    } else {
+      initMobileLogoAnimations();
+    }
+
+    // Re-initialize on window resize (orientation change)
+    let resizeTimer;
+    window.addEventListener('resize', function() {
+      clearTimeout(resizeTimer);
+      resizeTimer = setTimeout(() => {
+        initMobileLogoAnimations();
+      }, 250);
+    });
   </script>
 
 </body>
