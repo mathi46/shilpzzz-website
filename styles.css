@@ -751,6 +751,16 @@ body {
   font-size: 1.8rem;
 }
 
+/* Footer logo specific styling to ensure proper visibility */
+.footer .logo-company-name {
+  fill: #3b82f6; /* Bright blue for better visibility on dark background */
+}
+
+.footer .logo-highlight {
+  fill: #ef4444; /* Bright red for better visibility on dark background */
+  filter: drop-shadow(0 1px 3px rgba(239, 68, 68, 0.3));
+}
+
 .footer-section p {
   color: var(--footer-text);
   line-height: 1.6;
@@ -916,14 +926,14 @@ body {
 
 /* Professional logo text styling */
 .logo-company-name {
-  fill: var(--text-primary);
+  fill: #0066cc; /* Blue color for SHILP */
   transition: fill 0.3s ease;
   font-feature-settings: "liga" 1, "kern" 1;
 }
 
 .logo-highlight {
-  fill: var(--brand-accent);
-  filter: drop-shadow(0 1px 3px rgba(59, 130, 246, 0.2));
+  fill: #dc2626; /* Red color for ZZZ */
+  filter: drop-shadow(0 1px 3px rgba(220, 38, 38, 0.2));
   transition: fill 0.3s ease, filter 0.3s ease;
 }
 
@@ -950,9 +960,13 @@ body {
   filter: drop-shadow(0 2px 6px rgba(96, 165, 250, 0.2));
 }
 
+.dark-theme .logo-company-name {
+  fill: #3b82f6; /* Brighter blue for dark theme */
+}
+
 .dark-theme .logo-highlight {
-  fill: #60a5fa;
-  filter: drop-shadow(0 1px 3px rgba(96, 165, 250, 0.3));
+  fill: #ef4444; /* Brighter red for dark theme */
+  filter: drop-shadow(0 1px 3px rgba(239, 68, 68, 0.3));
 }
 
 /* Professional logo hover effects */
@@ -1061,6 +1075,19 @@ body {
   stroke: url(#vastuGradientDark);
 }
 
+/* Dark theme Vastu adjustments for footer logo */
+.dark-theme .footer .yantra-triangle {
+  fill: url(#vastuGradientDarkFooter);
+}
+
+.dark-theme .footer .sacred-center {
+  fill: url(#vastuGradientDarkFooter);
+}
+
+.dark-theme .footer .yantra-circle {
+  stroke: url(#vastuGradientDarkFooter);
+}
+
 /* Vastu logo hover effects */
 .nav-logo:hover .lotus-base {
   opacity: 0.3;
@@ -1130,9 +1157,56 @@ body {
   animation: sacred-meditation 2s ease-in-out infinite;
 }
 
-@keyframes sacred-meditation {
-  0%, 100% { transform: scale(1.05); }
-  25% { transform: scale(1.06) rotate(0.5deg); }
-  50% { transform: scale(1.07); }
-  75% { transform: scale(1.06) rotate(-0.5deg); }
+/* Footer logo hover effects - matching nav logo animations */
+.footer-logo:hover .logo-svg {
+  transform: scale(1.03);
+}
+
+.footer-logo:hover .lotus-base {
+  opacity: 0.3;
+  transform: rotate(45deg) scale(1.1);
+}
+
+.footer-logo:hover .sacred-geometry {
+  transform: scale(1.05);
+  animation: sacred-meditation 2s ease-in-out infinite;
+}
+
+.footer-logo:hover .yantra-circle {
+  stroke-dashoffset: 0;
+  opacity: 0.6;
+}
+
+.footer-logo:hover .yantra-triangle {
+  transform: rotate(180deg);
+}
+
+.footer-logo:hover .sacred-center {
+  transform: scale(1.2);
+  filter: drop-shadow(0 0 8px rgba(217, 119, 6, 0.4));
+}
+
+.footer-logo:hover .logo-letter-sacred {
+  transform: scale(1.1);
+  filter: drop-shadow(0 0 12px rgba(251, 191, 36, 0.6));
+}
+
+.footer-logo:hover .vastu-directions circle {
+  transform: scale(1.3);
+  opacity: 1;
+}
+
+.footer-logo:hover .om-symbol {
+  opacity: 0.3;
+  transform: translate(45px, 15px) scale(0.4) rotate(360deg);
+}
+
+.footer-logo:hover .prosperity-dot {
+  transform: scale(1.5);
+  opacity: 1;
+}
+
+.footer-logo:hover .logo-highlight {
+  fill: var(--vastu-golden-light);
+  filter: drop-shadow(0 2px 6px rgba(245, 158, 11, 0.4));
 }
