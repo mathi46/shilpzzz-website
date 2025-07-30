@@ -27,11 +27,14 @@
   --card-shadow: rgba(0, 0, 0, 0.1);
   --hero-overlay: rgba(255, 255, 255, 0.1);
   
-  /* Brand colors updated to dark red theme */
-  --brand-primary: #8B0000;
-  --brand-secondary: #A0001B;
-  --brand-accent: #DC143C;
-  --brand-accent-dark: #B22222;
+  /* Vastu-inspired brand colors for prosperity and harmony */
+  --brand-primary: #1e3a8a;
+  --brand-secondary: #1d4ed8;
+  --brand-accent: #3b82f6;
+  --brand-accent-dark: #2563eb;
+  --vastu-gold: #d97706;
+  --vastu-golden-light: #f59e0b;
+  --vastu-prosperity: #fbbf24;
   --success-color: #10b981;
 }
 
@@ -885,7 +888,7 @@ body {
   }
 }
 
-/* Logo Styling for Theme Consistency */
+/* Professional Logo Styling */
 .nav-logo img {
   height: 60px;
   width: 150px;
@@ -893,42 +896,69 @@ body {
   filter: brightness(1) contrast(1);
 }
 
-/* SVG Logo Styling */
+/* Vastu-Integrated Professional SVG Logo Styling */
 .logo-svg {
   height: 60px;
-  width: 200px;
+  width: 240px;
   transition: all 0.3s ease;
 }
 
-/* SVG Logo text styling */
+/* Logo background shape styling */
+.logo-bg-shape {
+  transition: all 0.3s ease;
+  filter: drop-shadow(0 2px 4px rgba(30, 58, 138, 0.15));
+}
+
+/* Logo letter styling */
+.logo-letter {
+  transition: all 0.3s ease;
+}
+
+/* Professional logo text styling */
 .logo-company-name {
   fill: var(--text-primary);
   transition: fill 0.3s ease;
+  font-feature-settings: "liga" 1, "kern" 1;
 }
 
 .logo-highlight {
-  fill: var(--brand-primary);
-  filter: drop-shadow(0 1px 2px rgba(139, 0, 0, 0.2));
+  fill: var(--brand-accent);
+  filter: drop-shadow(0 1px 3px rgba(59, 130, 246, 0.2));
   transition: fill 0.3s ease, filter 0.3s ease;
+}
+
+/* Vastu-enhanced highlight with prosperity blessing */
+.nav-logo:hover .logo-highlight {
+  fill: var(--vastu-golden-light);
+  filter: drop-shadow(0 2px 6px rgba(245, 158, 11, 0.4));
 }
 
 .logo-tagline {
   fill: var(--text-secondary);
   transition: fill 0.3s ease;
+  font-feature-settings: "liga" 1, "kern" 1;
 }
 
 /* Dark theme logo adjustments */
 .dark-theme .nav-logo img {
-  /* Increase brightness and adjust contrast for better visibility in dark mode */
   filter: brightness(1.2) contrast(0.9);
-  /* Add a subtle white glow effect for better visibility */
   box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
 }
 
-/* Logo hover effects */
+.dark-theme .logo-bg-shape {
+  fill: url(#logoGradientDark);
+  filter: drop-shadow(0 2px 6px rgba(96, 165, 250, 0.2));
+}
+
+.dark-theme .logo-highlight {
+  fill: #60a5fa;
+  filter: drop-shadow(0 1px 3px rgba(96, 165, 250, 0.3));
+}
+
+/* Professional logo hover effects */
 .nav-logo:hover img,
 .nav-logo:hover .logo-svg {
-  transform: scale(1.05);
+  transform: scale(1.03);
 }
 
 .dark-theme .nav-logo:hover img {
@@ -936,13 +966,173 @@ body {
   box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
 }
 
-/* SVG specific hover effects */
-.nav-logo:hover .logo-icon {
-  transform: scale(1.1);
+/* Professional SVG hover effects */
+.nav-logo:hover .logo-bg-shape {
+  transform: scale(1.05);
   transform-origin: center;
   transition: transform 0.3s ease;
+  filter: drop-shadow(0 3px 8px rgba(30, 58, 138, 0.25));
 }
 
-.nav-logo:hover .logo-highlight {
-  fill: var(--brand-accent);
+.dark-theme .nav-logo:hover .logo-bg-shape {
+  filter: drop-shadow(0 3px 10px rgba(96, 165, 250, 0.3));
+}
+
+/* Removed - now handled by Vastu-enhanced highlight above */
+
+/* Tech elements hover animation */
+.nav-logo:hover rect {
+  animation: techPulse 2s ease-in-out infinite;
+}
+
+.nav-logo:hover line {
+  stroke-width: 1;
+  opacity: 0.6;
+  transition: all 0.3s ease;
+}
+
+@keyframes techPulse {
+  0%, 100% { opacity: 0.8; }
+  50% { opacity: 1; transform: scale(1.1); }
+}
+
+/* Vastu-specific logo element styling */
+.lotus-base {
+  transition: all 0.5s ease;
+  transform-origin: center;
+}
+
+.sacred-geometry {
+  transition: all 0.4s ease;
+  transform-origin: center;
+}
+
+.yantra-circle {
+  transition: all 0.6s ease;
+  stroke-dasharray: 113;
+  stroke-dashoffset: 113;
+  animation: drawYantra 3s ease-in-out infinite;
+}
+
+.yantra-triangle {
+  transition: all 0.4s ease;
+  transform-origin: center;
+}
+
+.sacred-center {
+  transition: all 0.3s ease;
+  transform-origin: center;
+}
+
+.logo-letter-sacred {
+  transition: all 0.3s ease;
+  transform-origin: center;
+}
+
+.vastu-directions {
+  transition: all 0.4s ease;
+}
+
+.vastu-directions circle {
+  transition: all 0.3s ease;
+  transform-origin: center;
+}
+
+.om-symbol {
+  transition: all 0.5s ease;
+  transform-origin: center;
+}
+
+.prosperity-dot {
+  transition: all 0.3s ease;
+  animation: prosperity-pulse 4s ease-in-out infinite;
+}
+
+/* Dark theme Vastu adjustments */
+.dark-theme .yantra-triangle {
+  fill: url(#vastuGradientDark);
+}
+
+.dark-theme .sacred-center {
+  fill: url(#vastuGradientDark);
+}
+
+.dark-theme .yantra-circle {
+  stroke: url(#vastuGradientDark);
+}
+
+/* Vastu logo hover effects */
+.nav-logo:hover .lotus-base {
+  opacity: 0.3;
+  transform: rotate(45deg) scale(1.1);
+}
+
+.nav-logo:hover .sacred-geometry {
+  transform: scale(1.05);
+}
+
+.nav-logo:hover .yantra-circle {
+  stroke-dashoffset: 0;
+  opacity: 0.6;
+}
+
+.nav-logo:hover .yantra-triangle {
+  transform: rotate(180deg);
+}
+
+.nav-logo:hover .sacred-center {
+  transform: scale(1.2);
+  filter: drop-shadow(0 0 8px rgba(217, 119, 6, 0.4));
+}
+
+.nav-logo:hover .logo-letter-sacred {
+  transform: scale(1.1);
+  filter: drop-shadow(0 0 12px rgba(251, 191, 36, 0.6));
+}
+
+.nav-logo:hover .vastu-directions circle {
+  transform: scale(1.3);
+  opacity: 1;
+}
+
+.nav-logo:hover .om-symbol {
+  opacity: 0.3;
+  transform: translate(45px, 15px) scale(0.4) rotate(360deg);
+}
+
+.nav-logo:hover .prosperity-dot {
+  transform: scale(1.5);
+  opacity: 1;
+}
+
+/* Sacred geometry animations */
+@keyframes drawYantra {
+  0% { stroke-dashoffset: 113; opacity: 0.1; }
+  50% { stroke-dashoffset: 56; opacity: 0.5; }
+  100% { stroke-dashoffset: 0; opacity: 0.3; }
+}
+
+@keyframes prosperity-pulse {
+  0%, 100% { 
+    opacity: 0.6; 
+    transform: scale(1);
+    filter: drop-shadow(0 0 2px rgba(217, 119, 6, 0.3));
+  }
+  50% { 
+    opacity: 0.9; 
+    transform: scale(1.2);
+    filter: drop-shadow(0 0 6px rgba(217, 119, 6, 0.6));
+  }
+}
+
+/* Meditation/focus animation on prolonged hover */
+.nav-logo:hover .sacred-geometry {
+  animation: sacred-meditation 2s ease-in-out infinite;
+}
+
+@keyframes sacred-meditation {
+  0%, 100% { transform: scale(1.05); }
+  25% { transform: scale(1.06) rotate(0.5deg); }
+  50% { transform: scale(1.07); }
+  75% { transform: scale(1.06) rotate(-0.5deg); }
 }

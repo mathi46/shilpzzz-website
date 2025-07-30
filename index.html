@@ -199,47 +199,123 @@
   <nav class="navbar">
     <div class="nav-container">
       <div class="nav-logo">
-        <!-- SVG Logo (recommended for better theme consistency) -->
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 60" class="logo-svg">
+        <!-- Vastu-Integrated Professional SVG Logo -->
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 60" class="logo-svg">
           <defs>
-            <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-              <stop offset="0%" style="stop-color:#8B0000;stop-opacity:1" />
-              <stop offset="100%" style="stop-color:#DC143C;stop-opacity:1" />
+            <!-- Vastu-inspired gradient for prosperity (Blue to Golden) -->
+            <linearGradient id="vastuGradientPrimary" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" style="stop-color:#1e3a8a;stop-opacity:1" />
+              <stop offset="40%" style="stop-color:#3b82f6;stop-opacity:1" />
+              <stop offset="70%" style="stop-color:#6366f1;stop-opacity:1" />
+              <stop offset="100%" style="stop-color:#d97706;stop-opacity:1" />
             </linearGradient>
-            <linearGradient id="accentGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-              <stop offset="0%" style="stop-color:#B22222;stop-opacity:1" />
-              <stop offset="100%" style="stop-color:#A0001B;stop-opacity:1" />
+            
+            <!-- Sacred geometry accent gradient -->
+            <linearGradient id="vastuAccentGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" style="stop-color:#f59e0b;stop-opacity:1" />
+              <stop offset="50%" style="stop-color:#d97706;stop-opacity:1" />
+              <stop offset="100%" style="stop-color:#b45309;stop-opacity:1" />
             </linearGradient>
+            
+            <!-- Dark theme Vastu gradient -->
+            <linearGradient id="vastuGradientDark" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" style="stop-color:#60a5fa;stop-opacity:1" />
+              <stop offset="40%" style="stop-color:#3b82f6;stop-opacity:1" />
+              <stop offset="70%" style="stop-color:#8b5cf6;stop-opacity:1" />
+              <stop offset="100%" style="stop-color:#fbbf24;stop-opacity:1" />
+            </linearGradient>
+            
+            <!-- Sacred Om symbol filter -->
+            <filter id="goldenGlow" x="-50%" y="-50%" width="200%" height="200%">
+              <feGaussianBlur stdDeviation="1" result="coloredBlur"/>
+              <feMerge> 
+                <feMergeNode in="coloredBlur"/>
+                <feMergeNode in="SourceGraphic"/>
+              </feMerge>
+            </filter>
           </defs>
           
-          <!-- Icon container -->
+          <!-- Vastu-inspired Icon container -->
           <g class="logo-icon">
-            <!-- Main circle background -->
-            <circle cx="25" cy="30" r="20" fill="url(#logoGradient)"/>
+            <!-- Sacred Lotus base (8-petaled for prosperity) -->
+            <g class="lotus-base" opacity="0.15">
+              <path d="M 25 15 Q 30 10 35 15 Q 40 20 35 25 Q 30 30 25 25 Q 20 20 25 15" fill="url(#vastuAccentGradient)"/>
+              <path d="M 25 35 Q 30 40 35 35 Q 40 30 35 25 Q 30 20 25 25 Q 20 30 25 35" fill="url(#vastuAccentGradient)"/>
+              <path d="M 15 25 Q 10 20 15 15 Q 20 10 25 15 Q 30 20 25 25 Q 20 30 15 25" fill="url(#vastuAccentGradient)"/>
+              <path d="M 35 25 Q 40 20 45 25 Q 50 30 45 35 Q 40 40 35 35 Q 30 30 35 25" fill="url(#vastuAccentGradient)"/>
+            </g>
             
-            <!-- Stylized "Z" with tech elements -->
-            <path d="M 15 20 L 35 20 L 20 30 L 35 30 L 15 40 L 30 40 L 30 38 L 20 38 L 35 28 L 20 28 L 35 18 L 15 18 Z" 
-                  fill="white" stroke="none"/>
+            <!-- Main sacred geometry shape (based on Sri Yantra principles) -->
+            <g class="sacred-geometry">
+              <!-- Outer yantra circle -->
+              <circle cx="25" cy="30" r="18" fill="none" stroke="url(#vastuGradientPrimary)" stroke-width="0.5" opacity="0.3" class="yantra-circle"/>
+              
+              <!-- Inner triangular harmony (upward triangle for Shiva energy) -->
+              <path d="M 25 15 L 35 35 L 15 35 Z" 
+                    fill="url(#vastuGradientPrimary)" 
+                    opacity="0.8"
+                    class="yantra-triangle"/>
+              
+              <!-- Sacred center (bindu point) -->
+              <circle cx="25" cy="30" r="8" fill="url(#vastuGradientPrimary)" class="sacred-center"/>
+            </g>
             
-            <!-- Tech accent dots -->
-            <circle cx="38" cy="15" r="2" fill="url(#accentGradient)"/>
-            <circle cx="42" cy="20" r="1.5" fill="url(#accentGradient)" opacity="0.8"/>
-            <circle cx="38" cy="25" r="1" fill="url(#accentGradient)" opacity="0.6"/>
+            <!-- Stylized "S" with Vastu proportions (Golden Ratio based) -->
+            <path d="M 20 22 Q 25 20 30 22 Q 32 24 30 26 Q 25 28 20 26 Q 18 28 20 30 Q 25 32 30 30 Q 32 32 30 34 Q 25 36 20 34 Q 18 36 20 38" 
+                  fill="white" 
+                  stroke="none"
+                  filter="url(#goldenGlow)"
+                  class="logo-letter-sacred"/>
+            
+            <!-- Vastu directional elements (representing 8 directions) -->
+            <g class="vastu-directions">
+              <!-- North-East (Ishaan) - Water element -->
+              <circle cx="38" cy="18" r="1.5" fill="#06b6d4" opacity="0.7"/>
+              <!-- South-East (Agni) - Fire element -->
+              <circle cx="43" cy="25" r="1.2" fill="#ef4444" opacity="0.6"/>
+              <!-- South-West (Nairutya) - Earth element -->
+              <circle cx="38" cy="32" r="1" fill="#84cc16" opacity="0.5"/>
+              
+              <!-- Sacred connection lines (representing energy flow) -->
+              <path d="M 38 18 Q 40 20 43 25 Q 40 30 38 32" 
+                    stroke="url(#vastuAccentGradient)" 
+                    stroke-width="0.3" 
+                    fill="none" 
+                    opacity="0.4"/>
+            </g>
+            
+            <!-- Subtle Om symbol integration -->
+            <g class="om-symbol" opacity="0.1" transform="translate(45, 15) scale(0.3)">
+              <path d="M 0 10 Q 5 5 10 10 Q 15 15 10 20 Q 5 25 0 20 Q -5 15 0 10 M 8 8 Q 12 4 16 8 Q 20 12 16 16" 
+                    fill="url(#vastuAccentGradient)"/>
+            </g>
           </g>
           
-          <!-- Company name -->
+          <!-- Company name with Vastu-blessed typography -->
           <g class="logo-text">
-            <!-- ShilpzzZ -->
-            <text x="55" y="25" font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" 
-                  font-size="16" font-weight="700" class="logo-company-name">
-              SHILP<tspan class="logo-highlight">zzZ</tspan>
+            <!-- SHILPZZZ with sacred proportions -->
+            <text x="60" y="26" 
+                  font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" 
+                  font-size="18" 
+                  font-weight="600" 
+                  class="logo-company-name"
+                  letter-spacing="-0.3px">
+              SHILP<tspan class="logo-highlight" font-weight="700">ZZZ</tspan>
             </text>
             
-            <!-- Technologies -->
-            <text x="55" y="40" font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" 
-                  font-size="10" font-weight="500" class="logo-tagline">
-              Technologies
+            <!-- Technologies with auspicious spacing -->
+            <text x="60" y="40" 
+                  font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" 
+                  font-size="9" 
+                  font-weight="400" 
+                  class="logo-tagline"
+                  letter-spacing="1.08px"
+                  opacity="0.8">
+              TECHNOLOGIES
             </text>
+            
+            <!-- Subtle prosperity symbol -->
+            <circle cx="215" cy="30" r="2" fill="url(#vastuAccentGradient)" opacity="0.6" class="prosperity-dot"/>
           </g>
         </svg>
         
