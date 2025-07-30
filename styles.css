@@ -1010,9 +1010,10 @@ body {
 }
 
 .logo-tagline {
-  fill: var(--text-secondary);
+  fill: url(#blueRedGradient);
   transition: fill 0.3s ease;
   font-feature-settings: "liga" 1, "kern" 1;
+  opacity: 0.95;
 }
 
 /* Dark theme logo adjustments */
@@ -1033,6 +1034,22 @@ body {
 .dark-theme .logo-highlight {
   fill: #ef4444; /* Brighter red for dark theme */
   filter: drop-shadow(0 1px 3px rgba(239, 68, 68, 0.3));
+}
+
+.dark-theme .logo-tagline {
+  fill: url(#blueRedGradientDark);
+  opacity: 0.9;
+}
+
+/* Footer logo tagline specific styling */
+.footer .logo-tagline {
+  fill: url(#blueRedGradientFooter);
+  opacity: 0.95;
+}
+
+.dark-theme .footer .logo-tagline {
+  fill: url(#blueRedGradientDarkFooter);
+  opacity: 0.9;
 }
 
 /* Professional logo hover effects */
